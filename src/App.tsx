@@ -24,7 +24,10 @@ export default function App() {
 });
 
   const seleccionarMensaje = (id: number) =>{
-      setMensaje(mensajes.find((m:Mensaje) => m.id === id));
+    let mensaje = mensajes.find((m:Mensaje) => m.id === id);
+    if(mensaje){
+      setMensaje(mensaje); 
+    }  
 }
 
   return (
